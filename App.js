@@ -80,8 +80,8 @@ export default function App() {
               styles.bottomView,
               {
                 top: showAllInvestmentAmountData
-                  ? screenHeight - 165
-                  : screenHeight - 65,
+                  ? screenHeight - 200
+                  : screenHeight - 100,
               },
             ]}
           >
@@ -113,7 +113,7 @@ export default function App() {
                 </View>
               )}
               <View>
-                <View style={styles.pnl}>
+                <View style={[styles.pnl, { paddingVertical: 17 }]}>
                   <Text style={styles.bottomText}>Profit & Loss:</Text>
                   <Text> ₹ {TotalPNL.toFixed(2)}</Text>
                 </View>
@@ -156,13 +156,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-  },
-  nonPnl: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 5,
   },
   bottomText: {
     fontWeight: "600",
